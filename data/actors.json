@@ -5,7 +5,42 @@
     "status": "online",
     "description": "Automated Google Maps scraper for lead generation. Extracts business details and contact info.",
     "notionLink": "https://www.notion.so/Smart-Maps-Scraper-1234567890abcdef",
-    "icon": "🗺️"
+    "icon": "🗺️",
+    "config": {
+      "schedule": "0 0 * * *",
+      "env": { "API_KEY": "12345" },
+      "maxRetries": 3
+    },
+    "tasks": [
+      {
+        "id": "t1",
+        "title": "Initial Scrape",
+        "status": "done",
+        "createdAt": "2023-10-01T10:00:00Z",
+        "updatedAt": "2023-10-01T12:00:00Z"
+      },
+      {
+        "id": "t2",
+        "title": "Data Cleanse",
+        "status": "in-progress",
+        "createdAt": "2023-10-02T10:00:00Z",
+        "updatedAt": "2023-10-02T11:00:00Z"
+      }
+    ],
+    "logs": [
+      {
+        "id": "r1",
+        "actorId": "1",
+        "status": "success",
+        "startTime": "2023-10-01T10:00:00Z",
+        "endTime": "2023-10-01T10:05:00Z",
+        "logs": ["Starting...", "Processed 100 items", "Done."]
+      }
+    ],
+    "executionState": {
+      "status": "idle",
+      "lastRun": "2023-10-01T10:00:00Z"
+    }
   },
   {
     "id": "2",
@@ -13,6 +48,16 @@
     "status": "error",
     "description": "Monitors trending products on TikTok Shop. Tracks sales data and viral trends.",
     "notionLink": "https://www.notion.so/TikTok-Shop-Spy-0987654321fedcba",
-    "icon": "🛒"
+    "icon": "🛒",
+    "config": {
+      "schedule": "0 */4 * * *",
+      "env": { "TIKTOK_SECRET": "abcde" },
+      "maxRetries": 5
+    },
+    "tasks": [],
+    "logs": [],
+    "executionState": {
+      "status": "idle"
+    }
   }
 ]

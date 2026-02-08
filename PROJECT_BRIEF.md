@@ -1,8 +1,10 @@
 # Actor Dashboard - Project Brief
 
+**Notion Page:** [Actor Dashboard](https://www.notion.so/Dashboard-3015d34069d8803786c8e954b0b8dc6a)
+
 ## 1. Project Overview
 **Goal:** Create a centralized, interactive dashboard to monitor, manage, and document a fleet of AI "actors" (agents/bots).
-**Current Status:** Integration of 2 existing published actors, designed to scale for future additions.
+**Current Status:** Basic UI exists (mockup). The dashboard currently lacks functional depth and real integration.
 
 ## 2. Design Philosophy
 -   **Style:** Minimalist & Professional.
@@ -14,21 +16,29 @@
 -   **Language:** JavaScript/TypeScript (preferred).
 -   **Styling:** **Vanilla CSS / CSS Modules** (to strictly follow design control) to achieve custom glassmorphism effects.
 
-## 4. Functional Requirements
+## 4. Functional Requirements (Updated)
 ### A. Dashboard Interface
 -   **Layout:** Responsive grid or list view displaying all available actors.
 -   **Visuals:** Glassmorphic cards floating over a subtle, abstract background.
+-   **Functionality:** The dashboard must be fully functional, moving beyond a static UI.
 
 ### B. Actor Card Component
 -   **Status Indicator:** Visual cue for "Online", "Offline", "Error", "Maintenance".
 -   **Identity:** Actor Name, Avatar/Icon, Short Description.
 -   **Actions:**
-    -   **Manage:** Controls to start/stop/configure (or deep links to management interfaces).
+    -   **Run:** Launch a real execution of the actor with custom input parameters.
+    -   **Manage:** Controls to start/stop/configure.
+    -   **Details:** View detailed information about the actor.
+    -   **API Console:** Direct link to the API console for the actor.
     -   **Documentation:** Direct link to the specific **Notion** page for context and history.
 
-### C. Data Structure
+### C. Task Management (New)
+-   **Per-Actor Todo List:** Implement a Trello-style board or list for each actor to track development progress, bugs, and future features.
+-   **Tracking:** Add development steps for actors currently in development.
+
+### D. Data Structure
 -   **Scalability:** The system must allow easy addition of new actors (e.g., via a config array or JSON file initially, moving to an API later).
--   **Initial Data:** Mock data for the 2 existing actors.
+-   **Real Integration:** Move away from mock data to real API calls where possible.
 
 ## 5. Development Guidelines for Sub-Agents
 -   **Component Modularity:** Build reusable components (e.g., `ActorCard`, `StatusBadge`, `GlassContainer`).
