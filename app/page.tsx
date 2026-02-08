@@ -1,54 +1,40 @@
-import Layout from '../components/Layout';
-import GlassCard from '../components/GlassCard';
-import Button from '../components/Button';
+import React from 'react';
+import Layout from '@/components/Layout';
+import ActorCard from '@/components/ActorCard';
+import GlassCard from '@/components/GlassCard';
+import actorsData from '@/data/actors.json';
+import { Actor } from '@/types';
 
 export default function Home() {
-  const mockActors = [
-    { id: 1, name: 'Research Bot', status: 'Active', description: 'Web scraping and data aggregation.' },
-    { id: 2, name: 'Social Monitor', status: 'Idle', description: 'Tracking trends and mentions.' },
-    { id: 3, name: 'Content Gen', status: 'Active', description: 'Generating blog posts and summaries.' },
-    { id: 4, name: 'Analytics', status: 'Maintenance', description: 'Processing weekly reports.' },
-  ];
+  // Cast the imported JSON data to the Actor type
+  const actors: Actor[] = actorsData as unknown as Actor[];
 
   return (
     <Layout>
       <div className="grid">
-        {mockActors.map((actor) => (
-          <GlassCard key={actor.id} className="actor-card">
-            <h2 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', fontWeight: '600' }}>
-              {actor.name}
-            </h2>
-            <p style={{ color: 'var(--secondary-color)', fontSize: '0.9rem', marginBottom: '1rem' }}>
-              {actor.description}
-            </p>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span 
-                style={{ 
-                  display: 'inline-block', 
-                  padding: '0.25rem 0.75rem', 
-                  borderRadius: '1rem', 
-                  fontSize: '0.75rem', 
-                  fontWeight: '500',
-                  backgroundColor: actor.status === 'Active' ? 'rgba(40, 167, 69, 0.2)' : 
-                                   actor.status === 'Idle' ? 'rgba(255, 193, 7, 0.2)' : 
-                                   'rgba(220, 53, 69, 0.2)',
-                  color: actor.status === 'Active' ? '#28a745' : 
-                         actor.status === 'Idle' ? '#ffc107' : 
-                         '#dc3545',
-                }}
-              >
-                {actor.status}
-              </span>
-              <Button size="sm" variant="secondary">
-                Details
-              </Button>
-            </div>
-          </GlassCard>
+        {actors.map((actor) => (
+          <ActorCard key={actor.id} actor={actor} />
         ))}
+        
         {/* Placeholder for adding new actor */}
-        <GlassCard style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '200px', cursor: 'pointer', borderStyle: 'dashed' }}>
-          <div style={{ fontSize: '2rem', marginBottom: '0.5rem', color: 'var(--primary-color)' }}>+</div>
-          <p style={{ fontWeight: '500' }}>Add New Actor</p>
+        <GlassCard 
+          style={{ 
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems: 'center', 
+            justifyContent: 'center', 
+            minHeight: '200px', 
+            cursor: 'pointer', 
+            borderStyle: 'dashed',
+            opacity: 0.7,
+            transition: 'opacity 0.2s'
+          }}
+          className="hover:opacity-100" // Simple hover effect if using Tailwind, but we are using vanilla CSS, so inline style logic or class is better.
+          // Since we are using modules mostly, let's just stick to inline for this simple placeholder or add a class in globals if needed.
+          // I'll just use the existing inline style approach for now.
+        >
+          <div style={{ fontSize: '3rem', marginBottom: '0.5rem', color: 'rgba(255, 255, 255, 0.5)' }}>+</div>
+          <p style={{ fontWeight: '500', color: 'rgba(255, 255, 255, 0.8)' }}>Add New Actor</p>
         </GlassCard>
       </div>
     </Layout>

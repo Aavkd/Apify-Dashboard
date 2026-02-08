@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "name": "Smart Maps Scraper",
+    "status": "online",
+    "description": "Automated Google Maps scraper for lead generation. Extracts business details and contact info.",
+    "notionLink": "https://www.notion.so/Smart-Maps-Scraper-1234567890abcdef",
+    "icon": "🗺️"
+  },
+  {
+    "id": "2",
+    "name": "TikTok Shop Spy",
+    "status": "error",
+    "description": "Monitors trending products on TikTok Shop. Tracks sales data and viral trends.",
+    "notionLink": "https://www.notion.so/TikTok-Shop-Spy-0987654321fedcba",
+    "icon": "🛒"
+  }
+]

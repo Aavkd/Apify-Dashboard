@@ -29,13 +29,13 @@ This roadmap outlines the phased execution plan to build the Actor Dashboard usi
 
 ## Phase 3: Core Functionality & Data Integration
 **Goal:** Display the actors and their statuses dynamically.
-- [ ] **Data Model:**
+- [x] **Data Model:**
     - Define the `Actor` type interface (id, name, status, notionLink, description, etc.).
     - Create `data/actors.json` or a config file with mock data for the 2 existing actors.
-- [ ] **Actor Component:**
+- [x] **Actor Component:**
     - Build `ActorCard` to display specific actor info.
     - Implement status indicators (Green dot for Online, Red for Error, etc.).
-- [ ] **Dashboard View:**
+- [x] **Dashboard View:**
     - Render the list of actors from the data source into the grid.
 
 ## Phase 4: Interactions & Integration
