@@ -39,10 +39,17 @@
   flex-grow: 1;
 }
 
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
 .footer {
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: var(--glass-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .link {

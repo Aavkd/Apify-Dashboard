@@ -40,12 +40,12 @@ This roadmap outlines the phased execution plan to build the Actor Dashboard usi
 
 ## Phase 4: Interactions & Integration
 **Goal:** Make the dashboard functional and interactive.
-- [ ] **Management Actions:**
+- [x] **Management Actions:**
     - Add "Manage" buttons/links to the cards.
     - Implement mock handlers for start/stop actions (console log or toast notification).
-- [ ] **External Links:**
+- [x] **External Links:**
     - Integrate the Notion links properly (open in new tab with security attributes).
-- [ ] **Micro-Interactions:**
+- [x] **Micro-Interactions:**
     - Add hover effects to cards (lift up, glow).
     - Add smooth transitions for status changes or list filtering.
 
